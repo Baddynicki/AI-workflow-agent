@@ -1,0 +1,332 @@
+17:40:50 [INFO] main → ✅ Office Agent started
+17:40:50 [INFO] main → Type or paste  agent: <app>: <command>  then press Enter
+17:40:50 [INFO] clipboard_listener → 📋 Clipboard listener started
+17:40:50 [INFO] main → 📋 Clipboard listener started
+17:40:50 [INFO] keyboard_listener → ⌨️ Keyboard listener started
+17:40:50 [INFO] main → ⌨️  Keyboard listener started
+17:41:16 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+17:41:30 [INFO] keyboard_listener → ⌨️ Typed command: agent: excel: create a new table with 4 rows and 6 columns
+17:41:30 [INFO] main → App: excel | Command: create a new table with 4 rows and 6 columns
+17:41:31 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] excel: create a new table with 4 rows and 6 columns
+17:41:32 [INFO] gemini_handler → ✅ Gemini: {'action': 'create_table', 'rows': 4, 'cols': 6, 'start_cell': 'A1'}
+17:41:32 [INFO] excel_executor → Excel execute: {'action': 'create_table', 'rows': 4, 'cols': 6, 'start_cell': 'A1'}
+17:41:32 [INFO] app_launcher → ✅ Connected to running excel
+17:41:32 [INFO] notifier → 🔔 [Excel] Table 4×6 at A1 ✅
+17:42:53 [INFO] keyboard_listener → ⌨️ Typed command: agent: word: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:42:53 [INFO] main → App: word | Command: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:42:54 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] word: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:42:55 [ERROR] gemini_handler → Unparsable JSON: {"action": "create_document"}
+{"action": "save_document_as", "filename": "dmeo.docx"}
+{"action": "add_heading", "text": "Tests", "level": 1}
+{"action": "set_font_color", "target": "heading_1", "color": "blue"}
+{"action": "set_font_size", "target": "heading_1", "size": 46}
+{"action": "add_paragraph", "text": "test completed"}
+{"action": "set_font_color", "target": "body", "color": "black"}
+17:42:55 [ERROR] main → Gemini returned no action
+17:45:25 [INFO] main → ✅ Office Agent started
+17:45:25 [INFO] main → Type or paste  agent: <app>: <command>  then press Enter
+17:45:25 [INFO] clipboard_listener → 📋 Clipboard listener started
+17:45:25 [INFO] main → 📋 Clipboard listener started
+17:45:25 [INFO] keyboard_listener → ⌨️ Keyboard listener started
+17:45:25 [INFO] main → ⌨️  Keyboard listener started
+17:45:31 [INFO] clipboard_listener → 📋 Candidate stored (awaiting Enter): agent: word: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:45:33 [INFO] keyboard_listener → 📋 Ctrl+V — paste candidate armed
+17:45:40 [INFO] keyboard_listener → ⌨️ Pasted command: agent: word: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:45:40 [INFO] main → App: word | Command: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:45:40 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] word: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:45:41 [INFO] gemini_handler → ✅ Gemini: [{'action': 'create_document'}, {'action': 'save_document_as', 'filename': 'dmeo.docx'}, {'action': 'add_heading', 'text': 'Tests', 'level': 1}, {'action': 'set_font_color', 'target': 'heading_1', 'color': 'blue'}, {'action': 'set_font_size', 'target': 'heading_1', 'size': 46}, {'action': 'add_paragraph', 'text': 'test completed'}, {'action': 'set_font_color', 'target': 'body', 'color': 'black'}]
+17:45:41 [INFO] word_executor → Word execute: {'action': 'create_document'}
+17:45:41 [INFO] app_launcher → 🚀 Launching word...
+17:45:42 [INFO] app_launcher → ✅ word launched and connected
+17:45:43 [INFO] notifier → 🔔 [Word] New document created ✅
+17:45:43 [INFO] word_executor → Word execute: {'action': 'save_document_as', 'filename': 'dmeo.docx'}
+17:45:43 [INFO] notifier → 🔔 [Word] Saved as dmeo.docx ✅
+17:45:43 [INFO] word_executor → Word execute: {'action': 'add_heading', 'text': 'Tests', 'level': 1}
+17:45:43 [INFO] notifier → 🔔 [Word] Heading 1 added ✅
+17:45:43 [INFO] word_executor → Word execute: {'action': 'set_font_color', 'target': 'heading_1', 'color': 'blue'}
+17:45:43 [INFO] word_executor → Applied to 1 range(s) matching target='heading_1'
+17:45:43 [INFO] notifier → 🔔 [Word] Font color 'blue' → heading_1 ✅
+17:45:43 [INFO] word_executor → Word execute: {'action': 'set_font_size', 'target': 'heading_1', 'size': 46}
+17:45:43 [INFO] word_executor → Applied to 1 range(s) matching target='heading_1'
+17:45:43 [INFO] notifier → 🔔 [Word] Font size 46.0 → heading_1 ✅
+17:45:43 [INFO] word_executor → Word execute: {'action': 'add_paragraph', 'text': 'test completed'}
+17:45:43 [INFO] notifier → 🔔 [Word] Paragraph added ✅
+17:45:43 [INFO] word_executor → Word execute: {'action': 'set_font_color', 'target': 'body', 'color': 'black'}
+17:45:43 [INFO] word_executor → Applied to 2 range(s) matching target='body'
+17:45:43 [INFO] notifier → 🔔 [Word] Font color 'black' → body ✅
+17:46:00 [INFO] clipboard_listener → 📋 Candidate stored (awaiting Enter): agent: word: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:46:09 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+17:46:14 [INFO] clipboard_listener → 📋 Candidate stored (awaiting Enter): agent: powerpoint: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:46:15 [INFO] keyboard_listener → 📋 Ctrl+V — paste candidate armed
+17:46:17 [INFO] keyboard_listener → ⌨️ Pasted command: agent: powerpoint: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:46:17 [INFO] main → App: powerpoint | Command: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:46:17 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] powerpoint: create a new file name dmeo and put the Heading "Tests" with blue colour and font size 46 and then in content add test completed in black colour
+17:46:18 [INFO] gemini_handler → ✅ Gemini: [{'action': 'create_presentation', 'filename': 'dmeo.pptx'}, {'action': 'add_slide', 'layout': 1}, {'action': 'set_slide_text', 'slide_index': 1, 'target': 'title', 'text': 'Tests'}, {'action': 'set_font_color', 'slide_index': 1, 'target': 'title', 'color': 'blue'}, {'action': 'set_font_size', 'slide_index': 1, 'target': 'title', 'size': 46}, {'action': 'add_bullet_point', 'slide_index': 1, 'target': 'body', 'text': 'test completed'}, {'action': 'set_font_color', 'slide_index': 1, 'target': 'body', 'color': 'black'}]
+17:46:18 [INFO] ppt_executor → PPT execute: {'action': 'create_presentation', 'filename': 'dmeo.pptx'}
+17:46:18 [INFO] app_launcher → 🚀 Launching powerpoint...
+17:46:19 [INFO] app_launcher → ✅ powerpoint launched and connected
+17:46:20 [INFO] notifier → 🔔 [PowerPoint] New presentation created ✅
+17:46:20 [INFO] ppt_executor → PPT execute: {'action': 'add_slide', 'layout': 1}
+17:46:20 [INFO] notifier → 🔔 [PowerPoint] Slide added (layout 1) ✅
+17:46:20 [INFO] ppt_executor → PPT execute: {'action': 'set_slide_text', 'slide_index': 1, 'target': 'title', 'text': 'Tests'}
+17:46:20 [INFO] notifier → 🔔 [PowerPoint] 'title' text set ✅
+17:46:20 [INFO] ppt_executor → PPT execute: {'action': 'set_font_color', 'slide_index': 1, 'target': 'title', 'color': 'blue'}
+17:46:20 [INFO] notifier → 🔔 [PowerPoint] Font color 'blue' → slide 1 'title' ✅
+17:46:20 [INFO] ppt_executor → PPT execute: {'action': 'set_font_size', 'slide_index': 1, 'target': 'title', 'size': 46}
+17:46:20 [INFO] notifier → 🔔 [PowerPoint] Font size 46.0 → slide 1 'title' ✅
+17:46:20 [INFO] ppt_executor → PPT execute: {'action': 'add_bullet_point', 'slide_index': 1, 'target': 'body', 'text': 'test completed'}
+17:46:20 [WARNING] ppt_executor → No placeholder found for target='body' on slide. Expected types: [2]
+17:46:20 [ERROR] ppt_executor → PPT targeting error: No 'body' placeholder on slide 1. Slide may not have this placeholder type.
+17:46:20 [INFO] ppt_executor → PPT execute: {'action': 'set_font_color', 'slide_index': 1, 'target': 'body', 'color': 'black'}
+17:46:20 [WARNING] ppt_executor → No placeholder found for target='body' on slide. Expected types: [2]
+17:46:20 [ERROR] ppt_executor → PPT targeting error: No 'body' placeholder on slide 1. Slide may not have this placeholder type.
+17:48:05 [INFO] keyboard_listener → ⌨️ Typed command: agent: excel: give the table of
+17:48:05 [INFO] main → App: excel | Command: give the table of
+17:48:05 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] excel: give the table of
+17:48:06 [INFO] gemini_handler → ✅ Gemini: {'action': 'clear_range', 'range': 'A1:ZZ10000'}
+17:48:06 [INFO] excel_executor → Excel execute: {'action': 'clear_range', 'range': 'A1:ZZ10000'}
+17:48:06 [INFO] app_launcher → ✅ Connected to running excel
+17:48:06 [INFO] notifier → 🔔 [Excel] Cleared A1:ZZ10000 ✅
+17:49:30 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+17:49:37 [INFO] clipboard_listener → 📋 Candidate stored (awaiting Enter): agent: excel: create a new file names test and add these value in the column N row 1 , values are : ,15,30,45,50,85,96,45,15,12, and then average it
+17:49:38 [INFO] keyboard_listener → 📋 Ctrl+V — paste candidate armed
+17:49:58 [INFO] keyboard_listener → ⌨️ Pasted command: agent: excel: create a new file names test and add these value in the column N row 1 , values are : ,15,30,45,50,85,96,45,15,12, and then average it
+17:49:58 [INFO] main → App: excel | Command: create a new file names test and add these value in the column N row 1 , values are : ,15,30,45,50,85,96,45,15,12, and then average it
+17:49:58 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] excel: create a new file names test and add these value in the column N row 1 , values are : ,15,30,45,50,85,96,45,15,12, and then average it
+17:49:59 [INFO] gemini_handler → ✅ Gemini: [{'action': 'create_workbook', 'filename': 'test.xlsx'}, {'action': 'write_range', 'start_cell': 'N1', 'values': [[15], [30], [45], [50], [85], [96], [45], [15], [12]]}, {'action': 'write_formula', 'cell': 'N12', 'formula': '=AVERAGE(N1:N11)'}]
+17:49:59 [INFO] excel_executor → Excel execute: {'action': 'create_workbook', 'filename': 'test.xlsx'}
+17:49:59 [INFO] notifier → 🔔 [Excel] New workbook created ✅
+17:49:59 [INFO] excel_executor → Excel execute: {'action': 'write_range', 'start_cell': 'N1', 'values': [[15], [30], [45], [50], [85], [96], [45], [15], [12]]}
+17:49:59 [INFO] notifier → 🔔 [Excel] Range written ✅
+17:49:59 [INFO] excel_executor → Excel execute: {'action': 'write_formula', 'cell': 'N12', 'formula': '=AVERAGE(N1:N11)'}
+17:50:00 [INFO] notifier → 🔔 [Excel] Formula @ N12 ✅
+23:10:47 [INFO] main → ✅ Office Agent started
+23:10:47 [INFO] main → Type or paste  agent: <app>: <command>  then press Enter
+23:10:47 [INFO] clipboard_listener → 📋 Clipboard listener started
+23:10:47 [INFO] main → 📋 Clipboard listener started
+23:10:47 [INFO] keyboard_listener → ⌨️ Keyboard listener started
+23:10:47 [INFO] main → ⌨️  Keyboard listener started
+23:11:25 [INFO] keyboard_listener → ⌨️ Typed command: agent: excel: create a file namedd demo and create a table with 5 rows and 12 columns
+23:11:25 [INFO] main → App: excel | Command: create a file namedd demo and create a table with 5 rows and 12 columns
+23:11:26 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] excel: create a file namedd demo and create a table with 5 rows and 12 columns
+23:11:26 [INFO] gemini_handler → ✅ Gemini: [{'action': 'create_workbook', 'filename': 'demo.xlsx'}, {'action': 'create_table', 'rows': 5, 'cols': 12, 'start_cell': 'A1'}]
+23:11:26 [INFO] excel_executor → Excel execute: {'action': 'create_workbook', 'filename': 'demo.xlsx'}
+23:11:26 [INFO] app_launcher → ✅ Connected to running excel
+23:11:27 [INFO] notifier → 🔔 [Excel] New workbook created ✅
+23:11:27 [INFO] excel_executor → Excel execute: {'action': 'create_table', 'rows': 5, 'cols': 12, 'start_cell': 'A1'}
+23:11:27 [INFO] notifier → 🔔 [Excel] Table 5×12 at A1 ✅
+23:12:24 [INFO] keyboard_listener → ⌨️ Typed command: agent: excel: In the file demo add the value 1, 2, 3, 4,, 5, 6, 6 in the column N, staritngstarting from row 1 and make average at the end
+23:12:24 [INFO] main → App: excel | Command: In the file demo add the value 1, 2, 3, 4,, 5, 6, 6 in the column N, staritngstarting from row 1 and make average at the end
+23:12:25 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] excel: In the file demo add the value 1, 2, 3, 4,, 5, 6, 6 in the column N, staritngstarting from row 1 and make average at the end
+23:12:25 [INFO] gemini_handler → ✅ Gemini: [{'action': 'write_range', 'start_cell': 'N1', 'values': [[1], [2], [3], [4], [5], [6], [6]]}, {'action': 'write_formula', 'cell': 'N8', 'formula': '=AVERAGE(N1:N7)'}]
+23:12:25 [INFO] excel_executor → Excel execute: {'action': 'write_range', 'start_cell': 'N1', 'values': [[1], [2], [3], [4], [5], [6], [6]]}
+23:12:26 [INFO] notifier → 🔔 [Excel] Range written ✅
+23:12:26 [INFO] excel_executor → Excel execute: {'action': 'write_formula', 'cell': 'N8', 'formula': '=AVERAGE(N1:N7)'}
+23:12:26 [INFO] notifier → 🔔 [Excel] Formula @ N8 ✅
+23:13:45 [INFO] keyboard_listener → ⌨️ Typed command: agent: word: Create a file named demo and Make the title "Demo" with the font size 46 and write in contents "content" with font size 12 and black in colour and font colour should be blue
+23:13:45 [INFO] main → App: word | Command: Create a file named demo and Make the title "Demo" with the font size 46 and write in contents "content" with font size 12 and black in colour and font colour should be blue
+23:13:46 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] word: Create a file named demo and Make the title "Demo" with the font size 46 and write in contents "content" with font size 12 and black in colour and font colour should be blue
+23:13:47 [INFO] gemini_handler → ✅ Gemini: [{'action': 'create_document'}, {'action': 'save_document_as', 'filename': 'demo.docx'}, {'action': 'add_heading', 'text': 'Demo', 'level': 1}, {'action': 'set_font_size', 'target': 'heading_1', 'size': 46}, {'action': 'add_paragraph', 'text': 'content'}, {'action': 'set_font_size', 'target': 'body', 'size': 12}, {'action': 'set_font_color', 'target': 'body', 'color': 'blue'}]
+23:13:47 [INFO] word_executor → Word execute: {'action': 'create_document'}
+23:13:47 [INFO] app_launcher → 🚀 Launching word...
+23:13:48 [INFO] app_launcher → ✅ word launched and connected
+23:13:48 [INFO] notifier → 🔔 [Word] New document created ✅
+23:13:48 [INFO] word_executor → Word execute: {'action': 'save_document_as', 'filename': 'demo.docx'}
+23:13:49 [INFO] notifier → 🔔 [Word] Saved as demo.docx ✅
+23:13:49 [INFO] word_executor → Word execute: {'action': 'add_heading', 'text': 'Demo', 'level': 1}
+23:13:49 [INFO] notifier → 🔔 [Word] Heading 1 added ✅
+23:13:49 [INFO] word_executor → Word execute: {'action': 'set_font_size', 'target': 'heading_1', 'size': 46}
+23:13:49 [INFO] word_executor → Applied to 1 range(s) matching target='heading_1'
+23:13:49 [INFO] notifier → 🔔 [Word] Font size 46.0 → heading_1 ✅
+23:13:49 [INFO] word_executor → Word execute: {'action': 'add_paragraph', 'text': 'content'}
+23:13:49 [INFO] notifier → 🔔 [Word] Paragraph added ✅
+23:13:50 [INFO] word_executor → Word execute: {'action': 'set_font_size', 'target': 'body', 'size': 12}
+23:13:50 [INFO] word_executor → Applied to 2 range(s) matching target='body'
+23:13:50 [INFO] notifier → 🔔 [Word] Font size 12.0 → body ✅
+23:13:50 [INFO] word_executor → Word execute: {'action': 'set_font_color', 'target': 'body', 'color': 'blue'}
+23:13:50 [INFO] word_executor → Applied to 2 range(s) matching target='body'
+23:13:50 [INFO] notifier → 🔔 [Word] Font color 'blue' → body ✅
+23:14:03 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+23:14:03 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+23:14:03 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+23:14:27 [INFO] keyboard_listener → ⌨️ Typed command: agent: powerpoint: create a file named test with 5 slides and make the title " Test"
+23:14:27 [INFO] main → App: powerpoint | Command: create a file named test with 5 slides and make the title " Test"
+23:14:27 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] powerpoint: create a file named test with 5 slides and make the title " Test"
+23:14:29 [INFO] gemini_handler → ✅ Gemini: [{'action': 'create_presentation'}, {'action': 'add_slide', 'layout': 1}, {'action': 'set_slide_text', 'slide_index': 1, 'target': 'title', 'text': ' Test'}, {'action': 'add_slide', 'layout': 1}, {'action': 'set_slide_text', 'slide_index': 2, 'target': 'title', 'text': ' Test'}, {'action': 'add_slide', 'layout': 1}, {'action': 'set_slide_text', 'slide_index': 3, 'target': 'title', 'text': ' Test'}, {'action': 'add_slide', 'layout': 1}, {'action': 'set_slide_text', 'slide_index': 4, 'target': 'title', 'text': ' Test'}, {'action': 'add_slide', 'layout': 1}, {'action': 'set_slide_text', 'slide_index': 5, 'target': 'title', 'text': ' Test'}, {'action': 'save_presentation_as', 'filename': 'test.pptx'}]
+23:14:29 [INFO] ppt_executor → PPT execute: {'action': 'create_presentation'}
+23:14:29 [INFO] app_launcher → 🚀 Launching powerpoint...
+23:14:30 [INFO] app_launcher → ✅ powerpoint launched and connected
+23:14:30 [INFO] notifier → 🔔 [PowerPoint] New presentation created ✅
+23:14:30 [INFO] ppt_executor → PPT execute: {'action': 'add_slide', 'layout': 1}
+23:14:30 [INFO] notifier → 🔔 [PowerPoint] Slide added (layout 1) ✅
+23:14:30 [INFO] ppt_executor → PPT execute: {'action': 'set_slide_text', 'slide_index': 1, 'target': 'title', 'text': ' Test'}
+23:14:30 [INFO] notifier → 🔔 [PowerPoint] 'title' text set ✅
+23:14:30 [INFO] ppt_executor → PPT execute: {'action': 'add_slide', 'layout': 1}
+23:14:31 [INFO] notifier → 🔔 [PowerPoint] Slide added (layout 1) ✅
+23:14:31 [INFO] ppt_executor → PPT execute: {'action': 'set_slide_text', 'slide_index': 2, 'target': 'title', 'text': ' Test'}
+23:14:31 [INFO] notifier → 🔔 [PowerPoint] 'title' text set ✅
+23:14:31 [INFO] ppt_executor → PPT execute: {'action': 'add_slide', 'layout': 1}
+23:14:31 [INFO] notifier → 🔔 [PowerPoint] Slide added (layout 1) ✅
+23:14:31 [INFO] ppt_executor → PPT execute: {'action': 'set_slide_text', 'slide_index': 3, 'target': 'title', 'text': ' Test'}
+23:14:31 [INFO] notifier → 🔔 [PowerPoint] 'title' text set ✅
+23:14:31 [INFO] ppt_executor → PPT execute: {'action': 'add_slide', 'layout': 1}
+23:14:31 [INFO] notifier → 🔔 [PowerPoint] Slide added (layout 1) ✅
+23:14:31 [INFO] ppt_executor → PPT execute: {'action': 'set_slide_text', 'slide_index': 4, 'target': 'title', 'text': ' Test'}
+23:14:31 [INFO] notifier → 🔔 [PowerPoint] 'title' text set ✅
+23:14:31 [INFO] ppt_executor → PPT execute: {'action': 'add_slide', 'layout': 1}
+23:14:31 [INFO] notifier → 🔔 [PowerPoint] Slide added (layout 1) ✅
+23:14:31 [INFO] ppt_executor → PPT execute: {'action': 'set_slide_text', 'slide_index': 5, 'target': 'title', 'text': ' Test'}
+23:14:31 [INFO] notifier → 🔔 [PowerPoint] 'title' text set ✅
+23:14:31 [INFO] ppt_executor → PPT execute: {'action': 'save_presentation_as', 'filename': 'test.pptx'}
+23:14:31 [INFO] notifier → 🔔 [PowerPoint] Saved as test.pptx ✅
+23:19:07 [INFO] keyboard_listener → ⌨️ Typed command: agent: excel: enter the value of 4 in cell a1 and make it blue
+23:19:07 [INFO] main → App: excel | Command: enter the value of 4 in cell a1 and make it blue
+23:19:08 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] excel: enter the value of 4 in cell a1 and make it blue
+23:19:08 [INFO] gemini_handler → ✅ Gemini: [{'action': 'write_cell', 'cell': 'a1', 'value': 4}, {'action': 'set_font_color', 'range': 'a1', 'color': 'blue'}]
+23:19:08 [INFO] excel_executor → Excel execute: {'action': 'write_cell', 'cell': 'a1', 'value': 4}
+23:19:08 [INFO] notifier → 🔔 [Excel] Wrote → a1 ✅
+23:19:08 [INFO] excel_executor → Excel execute: {'action': 'set_font_color', 'range': 'a1', 'color': 'blue'}
+23:19:09 [INFO] notifier → 🔔 [Excel] Font color 'blue' @ a1 ✅
+23:19:51 [INFO] clipboard_listener → 📋 Candidate stored (awaiting Enter): agent: excel: enter the value of 4 in cell a1 and make the cell colour blue
+23:19:52 [INFO] keyboard_listener → 📋 Ctrl+V — paste candidate armed
+23:19:54 [INFO] keyboard_listener → ⌨️ Pasted command: agent: excel: enter the value of 4 in cell a1 and make the cell colour blue
+23:19:54 [INFO] main → App: excel | Command: enter the value of 4 in cell a1 and make the cell colour blue
+23:19:55 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] excel: enter the value of 4 in cell a1 and make the cell colour blue
+23:19:55 [ERROR] gemini_handler → Could not parse JSON from: {"action": "write_cell", "cell": "A1", "value": 4}{"action": "set_bg_color", "range": "A1", "color": "blue"}
+23:19:55 [ERROR] gemini_handler → Unparsable JSON: {"action": "write_cell", "cell": "A1", "value": 4}{"action": "set_bg_color", "range": "A1", "color": "blue"}
+23:19:55 [ERROR] main → Gemini returned no action
+23:19:58 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+23:20:16 [INFO] keyboard_listener → ⌨️ Typed command: agent: excel: enter the value 4 in the cell A1 and make the colout of the cell blue
+23:20:16 [INFO] main → App: excel | Command: enter the value 4 in the cell A1 and make the colout of the cell blue
+23:20:16 [INFO] gemini_handler → 🤖 [gemini-2.5-flash-lite] excel: enter the value 4 in the cell A1 and make the colout of the cell blue
+23:20:17 [ERROR] gemini_handler → Could not parse JSON from: {"action": "write_cell", "cell": "A1", "value": 4}{"action": "set_bg_color", "range": "A1", "color": "blue"}
+23:20:17 [ERROR] gemini_handler → Unparsable JSON: {"action": "write_cell", "cell": "A1", "value": 4}{"action": "set_bg_color", "range": "A1", "color": "blue"}
+23:20:17 [ERROR] main → Gemini returned no action
+00:36:39 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+00:36:47 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+00:39:11 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+00:53:51 [ERROR] clipboard_listener → Clipboard listener error: Error calling OpenClipboard ([WinError 0] The operation completed successfully.)
+00:53:52 [ERROR] clipboard_listener → Clipboard listener error: Error calling OpenClipboard ([WinError 0] The operation completed successfully.)
+00:53:53 [ERROR] clipboard_listener → Clipboard listener error: Error calling OpenClipboard ([WinError 0] The operation completed successfully.)
+00:53:54 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+00:53:54 [ERROR] clipboard_listener → Clipboard listener error: Error calling OpenClipboard ([WinError 0] The operation completed successfully.)
+12:57:13 [INFO] main → ✅ Office Agent started
+12:57:13 [INFO] main → Type or paste  agent: <app>: <command>  then press Enter
+12:57:13 [INFO] clipboard_listener → 📋 Clipboard listener started
+12:57:13 [INFO] main → 📋 Clipboard listener started
+12:57:13 [INFO] keyboard_listener → ⌨️ Keyboard listener started
+12:57:13 [INFO] main → ⌨️  Keyboard listener started
+12:58:09 [WARNING] main → Could not parse: type into word in bold "Hello what are you doing"
+12:59:10 [INFO] main → App: word | Command: type in bold "Hello what are you doing"
+12:59:10 [INFO] openai_handler → 🤖 [gpt-4o-mini] word: type in bold "Hello what are you doing"
+12:59:19 [INFO] openai_handler → ✅ OpenAI: {'action': 'add_paragraph', 'text': 'Hello what are you doing'}
+12:59:19 [INFO] word_executor → Word execute: {'action': 'add_paragraph', 'text': 'Hello what are you doing'}
+12:59:19 [INFO] app_launcher → 🚀 Launching word...
+12:59:21 [INFO] app_launcher → ✅ word launched and connected
+12:59:25 [INFO] notifier → 🔔 [Word] Paragraph added ✅
+13:01:52 [INFO] main → App: excel | Command: add values from a1 to a10 as 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 and compute the sum in cell b20
+13:01:52 [INFO] openai_handler → 🤖 [gpt-4o-mini] excel: add values from a1 to a10 as 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 and compute the sum in cell b20
+13:01:55 [ERROR] openai_handler → Could not parse JSON from: {"action":"write_range","start_cell":"A1","values":[[1],[2],[3],[4],[5],[6],[7],[8],[9],[0]]},{"action":"write_formula","cell":"B20","formula":"=SUM(A1:A10)"}
+13:01:55 [ERROR] openai_handler → Unparsable JSON: {"action":"write_range","start_cell":"A1","values":[[1],[2],[3],[4],[5],[6],[7],[8],[9],[0]]},{"action":"write_formula","cell":"B20","formula":"=SUM(A1:A10)"}
+13:01:55 [ERROR] main → openai returned no action
+13:05:14 [INFO] keyboard_listener → ⌨️ Typed command: agent: excel:
+13:05:14 [WARNING] main → Could not parse: agent: excel:
+13:05:14 [INFO] main → App: excel | Command: add values from a1 to a10 as 1 2  3  4  5  6  7  8  9 0 and compute the sum in cell b20
+13:05:14 [INFO] openai_handler → 🤖 [gpt-4o-mini] excel: add values from a1 to a10 as 1 2  3  4  5  6  7  8  9 0 and compute the sum in cell b20
+13:05:17 [ERROR] openai_handler → Could not parse JSON from: {"action":"write_range","start_cell":"A1","values":[[1],[2],[3],[4],[5],[6],[7],[8],[9],[0]]},{"action":"write_formula","cell":"B20","formula":"=SUM(A1:A10)"}
+13:05:17 [ERROR] openai_handler → Unparsable JSON: {"action":"write_range","start_cell":"A1","values":[[1],[2],[3],[4],[5],[6],[7],[8],[9],[0]]},{"action":"write_formula","cell":"B20","formula":"=SUM(A1:A10)"}
+13:05:17 [ERROR] main → openai returned no action
+13:16:08 [ERROR] clipboard_listener → Clipboard listener error: Error calling OpenClipboard ([WinError 0] The operation completed successfully.)
+10:22:44 [INFO] main → ✅ Office Agent started
+10:22:44 [INFO] main → Type or paste  agent: <app>: <command>  then press Enter
+10:22:44 [INFO] clipboard_listener → 📋 Clipboard listener started
+10:22:44 [INFO] main → 📋 Clipboard listener started
+10:22:44 [INFO] keyboard_listener → ⌨️ Keyboard listener started
+10:22:44 [INFO] main → ⌨️  Keyboard listener started
+10:22:44 [INFO] clipboard_listener → 📋 Candidate stored (awaiting Enter): agent: word: create a document and add a paragraph hello world and make it bold and change font to Arial and size 16
+10:23:01 [DEBUG] keyboard_listener → Enter ignored — no typed text and no paste detected
+10:23:06 [INFO] keyboard_listener → 📋 Ctrl+V — paste candidate armed
+10:23:11 [INFO] keyboard_listener → ⌨️ Pasted command: agent: word: create a document and add a paragraph hello world and make it bold and change font to Arial and size 16
+10:23:11 [INFO] main → App: word | Command: create a document and add a paragraph hello world and make it bold and change font to Arial and size 16
+10:23:11 [INFO] openai_handler → 🤖 [gpt-4o-mini] word: create a document and add a paragraph hello world and make it bold and change font to Arial and size 16
+10:23:11 [INFO] main → App: word | Command: create a document and add a paragraph hello world and make it bold and change font to Arial and size 16
+10:23:11 [INFO] openai_handler → 🤖 [gpt-4o-mini] word: create a document and add a paragraph hello world and make it bold and change font to Arial and size 16
+10:23:19 [INFO] openai_handler → ✅ OpenAI: [{'action': 'create_document'}, {'action': 'add_paragraph', 'text': 'hello world'}, {'action': 'set_bold', 'target': 'selection', 'bold': True}, {'action': 'set_font_name', 'target': 'selection', 'name': 'Arial'}, {'action': 'set_font_size', 'target': 'selection', 'size': 16}]
+10:23:19 [INFO] word_executor → Word execute: {'action': 'create_document'}
+10:23:19 [INFO] app_launcher → 🚀 Launching word...
+10:23:20 [INFO] openai_handler → ✅ OpenAI: [{'action': 'create_document'}, {'action': 'add_paragraph', 'text': 'hello world'}, {'action': 'set_bold', 'target': 'selection', 'bold': True}, {'action': 'set_font_name', 'target': 'selection', 'name': 'Arial'}, {'action': 'set_font_size', 'target': 'selection', 'size': 16}]
+10:23:20 [INFO] word_executor → Word execute: {'action': 'create_document'}
+10:23:20 [INFO] app_launcher → 🚀 Launching word...
+10:23:22 [INFO] app_launcher → ✅ word launched and connected
+10:23:22 [INFO] app_launcher → ✅ word launched and connected
+10:23:22 [INFO] notifier → 🔔 [Word] New document created ✅
+10:23:22 [INFO] notifier → 🔔 [Word] New document created ✅
+10:23:23 [INFO] word_executor → Word execute: {'action': 'add_paragraph', 'text': 'hello world'}
+10:23:23 [INFO] word_executor → Word execute: {'action': 'add_paragraph', 'text': 'hello world'}
+10:23:23 [INFO] app_launcher → ✅ Connected to running word
+10:23:23 [INFO] notifier → 🔔 [Word] Paragraph added ✅
+10:23:24 [INFO] word_executor → Word execute: {'action': 'set_bold', 'target': 'selection', 'bold': True}
+10:23:24 [INFO] app_launcher → ✅ Connected to running word
+10:23:24 [INFO] notifier → 🔔 [Word] Paragraph added ✅
+10:23:24 [INFO] word_executor → Word execute: {'action': 'set_bold', 'target': 'selection', 'bold': True}
+10:23:24 [INFO] app_launcher → ✅ Connected to running word
+10:23:24 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+10:23:24 [INFO] notifier → 🔔 [Word] Bold=On → selection ✅
+10:23:24 [INFO] word_executor → Word execute: {'action': 'set_font_name', 'target': 'selection', 'name': 'Arial'}
+10:23:24 [INFO] app_launcher → ✅ Connected to running word
+10:23:24 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+10:23:24 [INFO] notifier → 🔔 [Word] Bold=On → selection ✅
+10:23:24 [INFO] word_executor → Word execute: {'action': 'set_font_name', 'target': 'selection', 'name': 'Arial'}
+10:23:24 [INFO] app_launcher → ✅ Connected to running word
+10:23:24 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+10:23:24 [INFO] notifier → 🔔 [Word] Font 'Arial' → selection ✅
+10:23:24 [INFO] word_executor → Word execute: {'action': 'set_font_size', 'target': 'selection', 'size': 16}
+10:23:24 [INFO] app_launcher → ✅ Connected to running word
+10:23:24 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+10:23:24 [INFO] notifier → 🔔 [Word] Font 'Arial' → selection ✅
+10:23:24 [INFO] word_executor → Word execute: {'action': 'set_font_size', 'target': 'selection', 'size': 16}
+10:23:24 [INFO] app_launcher → ✅ Connected to running word
+10:23:24 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+10:23:24 [INFO] notifier → 🔔 [Word] Font size 16.0 → selection ✅
+10:23:25 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+10:23:25 [INFO] notifier → 🔔 [Word] Font size 16.0 → selection ✅
+10:25:43 [INFO] clipboard_listener → 📋 Candidate stored (awaiting Enter): agent: word: create a document, add heading Project Report, add paragraph this is a demo, make it bold, change font to Arial, size 16
+10:33:18 [INFO] main → ✅ Office Agent started
+10:33:18 [INFO] main → Type or paste  agent: <app>: <command>  then press Enter
+10:33:18 [INFO] clipboard_listener → 📋 Clipboard listener started
+10:33:18 [INFO] main → 📋 Clipboard listener started
+10:33:18 [INFO] keyboard_listener → ⌨️ Keyboard listener started
+10:33:18 [INFO] main → ⌨️  Keyboard listener started
+10:33:18 [INFO] clipboard_listener → 📋 Candidate stored (awaiting Enter): agent: word: create a document, add heading Project Report, add paragraph this is a demo, make it bold, change font to Arial, size 16
+10:36:33 [INFO] main → App: word | Command: write a paragraph hello world and make it bold, change the font to times new roman and size 20
+10:36:33 [INFO] openai_handler → 🤖 [gpt-4o-mini] word: write a paragraph hello world and make it bold, change the font to times new roman and size 20
+10:36:37 [INFO] openai_handler → ✅ OpenAI: [{'action': 'add_paragraph', 'text': 'hello world'}, {'action': 'set_bold', 'target': 'selection', 'bold': True}, {'action': 'set_font_name', 'target': 'selection', 'name': 'Times New Roman'}, {'action': 'set_font_size', 'target': 'selection', 'size': 20}]
+10:36:37 [INFO] word_executor → Word execute: {'action': 'add_paragraph', 'text': 'hello world'}
+10:36:37 [INFO] app_launcher → 🚀 Launching word...
+10:36:43 [INFO] app_launcher → ✅ word launched and connected
+10:36:44 [INFO] notifier → 🔔 [Word] Paragraph added ✅
+10:36:45 [INFO] word_executor → Word execute: {'action': 'set_bold', 'target': 'selection', 'bold': True}
+10:36:45 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+10:36:45 [INFO] notifier → 🔔 [Word] Bold=On → selection ✅
+10:36:45 [INFO] word_executor → Word execute: {'action': 'set_font_name', 'target': 'selection', 'name': 'Times New Roman'}
+10:36:46 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+10:36:46 [INFO] notifier → 🔔 [Word] Font 'Times New Roman' → selection ✅
+10:36:46 [INFO] word_executor → Word execute: {'action': 'set_font_size', 'target': 'selection', 'size': 20}
+10:36:47 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+10:36:47 [INFO] notifier → 🔔 [Word] Font size 20.0 → selection ✅
+11:00:03 [INFO] keyboard_listener → ⌨️ Typed command: agent: word: write a paragraph hello world and make it bold, change the font to times new roman and size 203 kaun
+11:00:03 [INFO] main → App: word | Command: write a paragraph hello world and make it bold, change the font to times new roman and size 203 kaun
+11:00:03 [INFO] openai_handler → 🤖 [gpt-4o-mini] word: write a paragraph hello world and make it bold, change the font to times new roman and size 203 kaun
+11:00:05 [INFO] openai_handler → ✅ OpenAI: [{'action': 'add_paragraph', 'text': 'hello world'}, {'action': 'set_bold', 'target': 'selection', 'bold': True}, {'action': 'set_font_name', 'target': 'selection', 'name': 'Times New Roman'}, {'action': 'set_font_size', 'target': 'selection', 'size': 203}]
+11:00:05 [INFO] word_executor → Word execute: {'action': 'add_paragraph', 'text': 'hello world'}
+11:00:05 [INFO] app_launcher → ✅ Connected to running word
+11:00:06 [INFO] notifier → 🔔 [Word] Paragraph added ✅
+11:00:06 [INFO] word_executor → Word execute: {'action': 'set_bold', 'target': 'selection', 'bold': True}
+11:00:06 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+11:00:06 [INFO] notifier → 🔔 [Word] Bold=On → selection ✅
+11:00:06 [INFO] word_executor → Word execute: {'action': 'set_font_name', 'target': 'selection', 'name': 'Times New Roman'}
+11:00:06 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+11:00:06 [INFO] notifier → 🔔 [Word] Font 'Times New Roman' → selection ✅
+11:00:06 [INFO] word_executor → Word execute: {'action': 'set_font_size', 'target': 'selection', 'size': 203}
+11:00:06 [INFO] word_executor → Applied to 1 range(s) matching target='selection'
+11:00:06 [INFO] notifier → 🔔 [Word] Font size 203.0 → selection ✅

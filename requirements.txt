@@ -1,0 +1,6 @@
+pywin32
+pynput
+pyperclip
+google-genai
+openpyxl
+plyer
