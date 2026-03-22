@@ -10,5 +10,5 @@ A background automation agent for Excel, Word, and PowerPoint.
 ## Usage
 Type or paste anywhere:
   agent: excel: create a table with 4 rows and 5 columns
-  agent: word: bold all the headings
+  agent: word: type a paragraph hello world with font size 14 and font style times new roman
   agent: powerpoint: add a new slide titled Sales 2026
