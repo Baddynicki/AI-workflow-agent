@@ -1,0 +1,7 @@
+test.py file contains the sample workflow which is being automated.
+In this case the word file Doc1.docx is opened, typed into with separate fonts and formatting styles
+like tables and lists.
+
+server.py not live yet;
+
+word_controller.py contains all the necessary basic functions which need to be automated in a word file.
